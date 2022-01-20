@@ -1,13 +1,41 @@
+* {
+  color: #fbeeed;
+  background-color: #18191a;
+}
+
+@font-face {
+  font-family: 'JlsdatagothicCnc-yyz3';
+  src: url('./fonts/JlsdatagothicCnc-yyz3.otf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'JlsdatagothicCnc-yyz3';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+  grid-gap: 1.5rem;
+}
+
+.animes-list img {
+  max-width: 100%;
+  border-radius: 5px;
 }
