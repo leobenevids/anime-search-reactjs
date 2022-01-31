@@ -21,12 +21,13 @@ function App() {
   return (
     <>
       <div className="header-container">
-        <h1>Animes</h1>
+        <h1>AnimeSearch</h1>
         <SearchInput value={text} onChange={(search) => setText(search)} />
         {text && !info.data && (
           <span>Carregando...</span>
         )}
       </div>
+      <div className="wrapper">
       {info.data && (
         <ul className="animes-list">
           {info.data.map((anime) => (
@@ -37,6 +38,7 @@ function App() {
           ))}
         </ul>
       )}
+      </div>
     </>
   );
 }
